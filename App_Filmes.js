@@ -13,18 +13,21 @@ class Login extends React.Component {
     super(props);
     this.state = {
       usuario: '',
-      senha: '',
-      UsuOK: '',
-      SenhaOK: ''
+      senha: ''
     };
   }
 
   fazerLogin = () => {
-    this.setState({
-      UsuOK: this.state.usuario,
-      SenhaOK: this.state.senha
-    });
-    this.props.navigation.navigate("Filmes");
+    const { usuario, senha } = this.state;
+
+    const usuarioValido = 'gabi';
+    const senhaValida = '1234';
+
+    if (usuario === usuarioValido && senha === senhaValida) {
+      this.props.navigation.navigate("Filmes");
+    } else {
+      alert("Usuário ou senha inválidos!");
+    }
   };
 
   render() {
@@ -49,6 +52,7 @@ class Login extends React.Component {
     );
   }
 }
+
 
 class Filmes extends React.Component {
   render() {
