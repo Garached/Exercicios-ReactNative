@@ -316,13 +316,36 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={{ headerShown: true }}>
-        <Tab.Screen name="Login" component={Login} options={{ tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="home-account" color={color} size={size} /> }} />
-        <Tab.Screen name="Cadastro" component={Cadastro} options={{ tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="account-plus" color={color} size={size} /> }} />
-        <Tab.Screen name="Menu" component={Menu} options={{ tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="gamepad-variant" color={color} size={size} /> }} />
-        <Tab.Screen name="Adivinhacao" component={Adivinhacao} options={{ tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="help-circle-outline" color={color} size={size} /> }} />
-        <Tab.Screen name="PedraPapelTesoura" component={PedraPapelTesoura} options={{ tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="hand-rock-outline" color={color} size={size} /> }} />
-        <Tab.Screen name="Scores" component={Scores} options={{ tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="trophy" color={color} size={size} /> }} />
-      </Tab.Navigator>
+  <Tab.Screen 
+    name="Login" 
+    component={Login} 
+    options={{ 
+      tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="home-account" color={color} size={size} /> 
+    }} 
+  />
+  <Tab.Screen 
+    name="Cadastro" 
+    component={Cadastro} 
+    options={{ 
+      tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="account-plus" color={color} size={size} /> 
+    }} 
+  />
+  <Tab.Screen 
+    name="Menu" 
+    component={Menu} 
+    options={{ 
+      tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="gamepad-variant" color={color} size={size} /> 
+    }} 
+  />
+  <Tab.Screen 
+    name="Scores" 
+    component={Scores} 
+    options={{ 
+      tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="trophy" color={color} size={size} /> 
+    }} 
+  />
+</Tab.Navigator>
+
     </NavigationContainer>
   );
 }
